@@ -1,0 +1,37 @@
+layout {
+    pane {
+        command "./scripts/start-database.sh"
+        split_direction "horizontal"
+        children {
+            pane {
+                command "./scripts/watch-shared.sh"
+                split_direction "vertical"
+                children {
+                    pane {
+                        command "./scripts/watch-mobile.sh"
+                        split_direction "vertical"
+                        children {
+                            pane {
+                                command "./scripts/watch-server.sh"
+                                split_direction "vertical"
+                            }
+                            pane {
+                                command "./scripts/start-server.sh"
+                                split_direction "vertical"
+                            }
+                            pane {
+                                command "./scripts/start-web.sh"
+                                split_direction "vertical"
+                            }
+                            pane {
+                                command "./scripts/start-mobile.sh"
+                                split_direction "vertical"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
